@@ -1,7 +1,9 @@
 function repeat(s, i) {
+    
+    let toPrint = ""
     if (i >= 1) {
         for (a = i; a !== 0; a--) {
-            console.log(s)
+            toPrint += s
         }
     } else {
         return
