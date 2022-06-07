@@ -1,11 +1,9 @@
-function repeat(s, i) {
-    
-    let toPrint = ""
-    if (i >= 1) {
-        for (a = i; a !== 0; a--) {
-            toPrint += s
-        }
-    } else {
+function repeat(s,  i) {
+    if (!i >= 0) {
         return
+    }
+
+    for (a = i; i !== 0; i--) {
+        return s
     }
 }
