@@ -109,6 +109,7 @@ function trunc(value) {
         return value
     }
 
+    
     let newVal = value * 100
     if (value > 0) {
         // console.log(8)
