@@ -3,7 +3,10 @@ function repeat(s,  i) {
         return
     }
 
+    let toPrint = ""
     for (a = i; i !== 0; i--) {
-        return s
+        toPrint += s
     }
+
+    return toPrint
 }
