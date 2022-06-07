@@ -5,4 +5,3 @@ function repeat(a, b) {
     }
     console.log(toPrint)
 }
-repeat('a', 3)
