@@ -95,13 +95,11 @@ function floor(value) {
 function trunc(value) {
     
     let counter = 0
-    let n 
     if (value > 0xfffffffff) {
-        n = value - 0xfffffffff
-        for (let a = n; a > 100; a -= 100) {
-            counter++
-        }
-        return counter + 0xfffffffff
+        value -= 0xfffffffff;
+        return trun(value) + 0xfffffffff;
+    } else {
+        return trun(value);
     }
     // trunc(value)
     // console.log(value)
@@ -126,8 +124,52 @@ function trunc(value) {
         return counter
 
 }
-// console.log(ceil(3.141592653589793))
-// console.log(ceil(-3.141592653589793))
-// console.log(ceil(2.718281828459045))
-// console.log(ceil(-2.718281828459045))
-// console.log(trunc(8734567236782365783482365))
+
+function trun(value) {
+    let m = modulo(value, 1);
+    if (m !== 0) {
+        return value - m;
+    } else {
+        return value;
+    }
+}
+
+function modulo(a, b) {
+    let result = 0
+    if (b === 0) {
+        return
+    }
+    if (b > a) {
+         result = a
+    }
+    if (a > 0 && b > 0) {
+        for (let i = a; i > 0; i -= b) {
+            result = i
+            if (b === result) {
+                result = 0
+            }
+        }
+    }
+    if (a > 0 && b < 0) {
+        for (let i = a; i > 0; i += b) {
+            result = i
+            if (b === result) {
+                result = 0
+            }
+        }
+    }
+    if (a < 0 && b > 0) {
+        for (let i = a; i < 0; i += b) {
+            result = i
+        }
+    }
+    if (a < 0 && b < 0) {
+        for (let i = a; i < 0; i -= b) {
+            result = i
+            if (b === result) {
+                result = 0
+            }
+        }
+    }
+    return result
+}
