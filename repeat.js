@@ -3,5 +3,6 @@ function repeat(a, b) {
     for (i = b; i > 0; i--) {
         toPrint += a
     }
-    return toPrint
+    console.log(toPrint)
 }
+repeat('a', 3)
