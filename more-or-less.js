@@ -17,4 +17,4 @@
 const more = nbr => nbr + 1;
 const less = nbr => nbr - 1;
 const add = (a, b) => a + b;
-const sub = (a, b) => a- b;
+const sub = (a, b) => a - b;

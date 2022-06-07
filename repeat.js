@@ -1,12 +1,7 @@
-function repeat(s,  i) {
-    if (!i >= 0) {
-        return
-    }
-
+function repeat(a, b) {
     let toPrint = ""
-    for (a = i; i !== 0; i--) {
-        toPrint += s
+    for (i = b; i > 0; i--) {
+        toPrint += a
     }
-
     return toPrint
 }
