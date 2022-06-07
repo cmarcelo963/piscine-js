@@ -1,5 +1,3 @@
-const res = require("express/lib/response")
-
 function multiply(a, b) {
     let result = 0
 
