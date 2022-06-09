@@ -1,9 +1,3 @@
-// console.log(split('a b c', ' '))
-// console.log(split('ggg - ddd - b', ' - '))
-// console.log(split('rrrr', 'rr'))
-console.log(split('Riad', ''))
-// console.log(split('ee,ff,g,', ','))
-
 function split(str, pos) {
     let arr = []
     let temp = ""
@@ -15,7 +9,6 @@ function split(str, pos) {
          return arr
     }
     for (let a = 0; a < str.length; a++) {
-        console.log(a)
         if (str.slice(a, a+pos.length) === pos) {
             if (str.slice(index, a) === "") {
                 arr.push("")
