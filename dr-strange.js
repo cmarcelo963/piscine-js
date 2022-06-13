@@ -4,7 +4,8 @@ function addWeek(current) {
     return day <= 6 ? week[day] : 'second'+week[day-week.length]
 }
 
-function timeTravel({date, hour, minute, second}) {
+function timeTravel({date, hour, minute, second}) {    
     date.setHours(hour, minute, second)
     return date
 }
+
