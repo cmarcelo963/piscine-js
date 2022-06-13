@@ -12,3 +12,4 @@ const vowelDots = (str) => {
 }
 
 console.log(vowelDots("hello"))
+
