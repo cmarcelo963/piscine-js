@@ -1,21 +1,21 @@
-import { styles } from './data.js'
-let click = 0
-const pimp = () => {
-    let b = document.querySelector('button')
-    if (b.classList.contains('unpimp')){  
-        click--
-        if (click == 0) {
-            b.classList.remove(styles[click], 'unpimp')
-        } else {
-            b.classList.remove(styles[click])
+import { styles } from "./pimp-my-style.data.js";
+
+export const pimp = e => {
+    let button = e.srcElement;
+    if (!button.classList.contains('unpimp')) {
+        button.classList.add(styles[button.classList.length-1]);
+        if (button.classList.length === styles.length + 1 && !button.classList.contains('unpimp')) {
+            button.classList.toggle('unpimp');
+            return;
         }
-    } else {  
-        if (click == 14) {
-             b.classList.add(styles[click], 'unpimp')
-        } else {
-            b.classList.add(styles[click])
-        }
-        click++
+        return;
     }
-}
-export {pimp}
+    if (button.classList.contains('unpimp')) {
+        let classes = Array.from(button.classList);
+        button.classList.remove(classes[classes.length-2]);
+        if (button.classList.length === 2) {
+            button.classList.toggle('unpimp');
+            return;
+        }
+    }
+} 
