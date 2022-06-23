@@ -15,3 +15,5 @@ const mapKeys = (obj,func) => {
     }
     return res
 }
+
+const reduceKeys = (obj,func,iv) => iv == undefined ?  Object.keys(obj).reduce(func) : [iv].concat(Object.keys(obj)).reduce(func)
